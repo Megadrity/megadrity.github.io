@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e6e4e4;
+    padding: 3rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    height: 95vh;
+    /* background-color: #0066aa;  */
+
+    background-image:
+        /* linear-gradient(to bottom rigt, rgba(128,58,213,0.9), rgba(53,20,94,0.8)), */
+        url(../Image/image1.jpn.jpg);
+    background-size: cover;
+    clip-path: polygon(50% 0, 100vh 100vh, 0vh 100% 100% 0);
+    position: relative;
+}
+
+header .foto header .textoHeader {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: azure;
+    text-transform: uppercase;
+}
+
+header .textoHeader h1 {
+    font-size: 5rem;
+    letter-spacing: 2rem;
+    text-shadow: 0.5rem 1 rem 1 rem #920808;
+    animation: entradaEsquerda:1s;
+}
+
+.textoHeader h2 {
+    font-size: 2 rem;
+    letter-spacing: 1.75rem;
+    font-weight: 700;
+    text-shadow: 0.5rem 0.5rem 1rem #e2dfe7;
+    margin-bottom: 5rem;
+    animation: entradaDireita:1s;
+}
+
+.textoHeader a,
+.textoHeader a:visited {
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 5rem;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    color: #7b6df8;
+    animation: entradaporBaixo 1s 1s;
+    animation-delay: ;
+}
+
+.textoHeader a:hover {
+    transform: translateY();
+}
+
+.textoHeader a:active {
+    transform: translateX();
+}
+
+.profile {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+
+}
+
+.profile img {
+    height: 20rem;
+    border-radius: 100%;
+    animation: profile 1s ease;
+    animation-fill-mode: backwards;
+}
+
+.Informações {
+    background-color: rgba(9, 15, 11, 0.575);
+    transform: skewy(5deg);
+    position: relative;
+    z-index: 1;
+    margin-top: -20rem;
+    padding: 20rem 0;
+    height: 150vh;
+}
+
+.Informações h3,
+.Informações .skills {
+    transform: skewY(-5deg);
+}
+
+.Informações h3 {
+    color: #fff;
+    background-image: none;
+}
+
+.Informações .skills {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Informações .card {
+    position: relative;
+    perspective: 150rem;
+    -webkit-perspective: 150rem;
+    width: 30vw;
+    height: 70rem;
+}
+
+.Informações .frente {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #201f1f;
+    backface-visibility: hidden;
+    transition: all .8s ease-out;
+    box-shadow: 0 1.5rem 4rem rgba(68, 4, 4, 0.6);
+    border-radius: .9rem;
+}
+
+.Informações .verso {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: .5rem;
+    transition: all .8s ease-out;
+    box-shadow: 0 1.5rem 4rem rgba(7, 7, 7, 0.6);
+
+}
+
+.Informações .card:hover .frente {
+    transform: rotateY(-100deg);
+}
+
+.Informações .card:hover .verso {
+    transform: rotateY(0deg);
+}
+
+.Informações .destaque {
+    background-blend-mode: color;
+    background-size: cover;
+    height: 40%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.Informações ul {
+    list-style-type: none;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.Informações ul li {
+    padding: 2rem 3rem;
+}
+
+.Informações ul li:not(:last-child) {
+    border-bottom: 2px solid #0c0101;
+}
+
+.Informações .destaque h5 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #727070;
+    position: absolute;
+    text-align: right;
+    padding-bottom: 5rem;
+    top: 19%;
+    left: 50%;
+}
+
+.Informações .front .destaque {
+    background-image: linear-gradient(to bottom right, #111111, #4e6148), url(../images/fundo-header.png);
+}
+
+.Informações .front .destaque h5 {
+    background-color: #94a796;
+}
+
+.Informações .back .destaque {
+    background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(../images/fundo-header.png);
+}
+
+.Informações .back .destaque h5 {
+    background-color: #021425;
+}
+
+.Informações .demais .destaque {
+    background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(../images/fundo-header.png);
+}
+
+.Informações .demais .destaque h5 {
+    background-color: #28b485;
+}
+
+.Informações .card .verso h5 {
+    font-size: 5rem;
+    padding: 3rem 3rem;
+}
+
+.Informações .front .verso {
+    background-image: linear-gradient(to bottom right, #3b4669, #022e0f);
+}
+
+.Informações .back .verso {
+    background-image: linear-gradient(to bottom right, #819187, #132b1c);
+}
+
+.Informações .demais .verso {
+    background-image: linear-gradient(to bottom right, #02640a, #486d52);
+}
+
+
+@keyframes entradaEsquerda {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entradaDireita {
+    0% {
+        opacity: 0;
+        transform: translateX(-10);
+    }
+
+    80% {
+        transform: translateX(5rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entradaBaixo {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10rem);
+    }
+}
+
+@keyframes .profile {
+    0% {
+        transform:
+    }
+
+    100% {}
+}
+
+@media screen and (max-width:600px) {
+    header.fotos {
+        right: 6rem;
+    }
+
+    header.img {
+        height: 16rem;
+    }
+
+    header.texto h1{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        letter-spacing: 1.4rem;
+    }
+
+    .Informações {}
+
+    .Informações .skill {}
+
+    .Informações .card {}
+
+    .Informações .card:not(:last-child) {}
+
+    .Informações .frente,
+    .Informações .verso {}
+}
